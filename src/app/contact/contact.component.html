@@ -23,37 +23,47 @@
                         <p class="d-inline-block bg-dark text-primary py-1 px-4">Appointment</p>
                         <h1 class="text-uppercase mb-4">Ready to change your look? Schedule an appointment with us today!</h1>
                         <p class="mb-4">Your new look is just one click away!</p>
-                        <form #appointmentForm="ngForm" (submit)="createAppointment(appointmentForm.value)">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent" id="subject" placeholder="Subject">
-                                        <label for="subject">Service Wanted</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control bg-transparent" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Date Example: 2023-06-30</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                                </div>
+                        <div *ngIf="appointment" class="container">
+                            <h2 class="text-center">Selected Appointment</h2>
+                          
+                            <div>
+                              <p>ID: {{ appointment.id }}</p>
+                              <p>Name: {{ appointment.name }}</p>
+                              <p>Email: {{ appointment.email }}</p>
+                              <p>Service: {{ appointment.service }}</p>
+                              <!-- Add more tracktrace details here when ready -->
                             </div>
-                        </form>
+                          </div>
+                          
+                          <div class="container mt-4">
+                            <h2 class="text-center">Schedule Appointment</h2>
+                          
+                            <form #contactForm="ngForm" (submit)="createAppointment(contactForm.value)">
+                              <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" ngModel required class="form-control">
+                              </div>
+                              <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="text" id="email" name="email" ngModel required class="form-control">
+                              </div>
+                              <div class="form-group">
+                                <label for="service">Service:</label>
+                                <input type="text" id="service" name="service" ngModel required class="form-control">
+                              </div>
+                              <div class="form-group">
+                                <label for="date">Date:</label>
+                                <input type="text" id="date" name="date" ngModel required class="form-control">
+                              </div>
+                              <div class="form-group">
+                                <label for="time">Time:</label>
+                                <input type="text" id="time" name="time" ngModel required class="form-control">
+                              </div>
+                              <!-- Add more tracktrace fields for creation here -->
+                              <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                          </div>
+                          
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">

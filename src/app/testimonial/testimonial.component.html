@@ -18,10 +18,43 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="d-inline-block bg-secondary text-primary py-1 px-4">Upcoming Appointments</p>
+                <!-- <p class="d-inline-block bg-secondary text-primary py-1 px-4">Upcoming Appointments</p> -->
                 <h1 class="text-uppercase"></h1>
             </div>
-           
+            <div class="container">
+                <h2 class="text-center">Upcoming Appointments</h2>
+              
+                <div class="table-container">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Service</th>
+                      <th>Date</th>
+                      <th>time</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let contact of appointments">
+                      <td>{{ contact.id }}</td>
+                      <td>{{ contact.name }}</td>
+                      <td>{{ contact.email }}</td>
+                      <td>{{ contact.service }}</td>
+                      <td>{{ contact.date }}</td>
+                      <td>{{ contact.time }}</td>
+                      
+                      <td>
+                        <!-- <button class="btn btn-primary" (click)="fetchAppointment(contact.id)">View</button> -->
+                        <button class="btn btn-info" (click)="updateAppointment(contact.id, contact)">Update</button>
+                        <button class="btn btn-danger" (click)="deleteAppointment(contact.id)">Delete</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>      
         </div>
     <!-- Testimonial End -->
