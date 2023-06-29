@@ -13,6 +13,7 @@ import { ServiceComponent } from './service/service.component';
 import { TeamComponent } from './team/team.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { HomeComponent } from './home/home.component';
+import { AppointmentComponent } from './appointment/appointment.component';
 
 
 
@@ -27,10 +28,11 @@ import { HomeComponent } from './home/home.component';
     TeamComponent,
     TestimonialComponent,
     HomeComponent,
+    AppointmentComponent,
   ],
   imports: [
     BrowserModule,
-    NgbModule,
+    //NgbModule,
     HttpClientModule,
     AppRoutingModule,
   ],
