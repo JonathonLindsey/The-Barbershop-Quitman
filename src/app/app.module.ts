@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
+import { AppRoutingModule } from 'src/app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AboutComponent } from './about/about.component';
@@ -11,6 +12,7 @@ import { PriceComponent } from './price/price.component';
 import { ServiceComponent } from './service/service.component';
 import { TeamComponent } from './team/team.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -24,11 +26,13 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
     ServiceComponent,
     TeamComponent,
     TestimonialComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule,
     HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
