@@ -13,7 +13,8 @@ import { ServiceComponent } from './service/service.component';
 import { TeamComponent } from './team/team.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { HomeComponent } from './home/home.component';
-import { AppointmentComponent } from './appointment/appointment.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -28,13 +29,13 @@ import { AppointmentComponent } from './appointment/appointment.component';
     TeamComponent,
     TestimonialComponent,
     HomeComponent,
-    AppointmentComponent,
+    
   ],
   imports: [
     BrowserModule,
-    //NgbModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
