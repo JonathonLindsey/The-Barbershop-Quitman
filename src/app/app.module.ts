@@ -10,7 +10,6 @@ import { ContactComponent } from './contact/contact.component';
 import { OpenComponent } from './open/open.component';
 import { PriceComponent } from './price/price.component';
 import { ServiceComponent } from './service/service.component';
-import { TeamComponent } from './team/team.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
@@ -26,7 +25,6 @@ import { FormsModule } from '@angular/forms';
     OpenComponent,
     PriceComponent,
     ServiceComponent,
-    TeamComponent,
     TestimonialComponent,
     HomeComponent,
     
